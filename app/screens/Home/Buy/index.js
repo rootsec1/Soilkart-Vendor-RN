@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, StatusBar } from 'react-native';
-import { Container, Content, Left, Right, Thumbnail, Text, View } from 'native-base';
+import { Container, Content, Left, Right, Thumbnail, Text, View, Icon } from 'native-base';
 //LOCAL
 import config from '../../../../config';
 
@@ -17,12 +17,13 @@ export default class Buy extends React.Component {
                     <StatusBar backgroundColor={config.COLOR_BACKGROUND} barStyle='dark-content' />
                     <View style={{flexDirection: 'row', flex: 1, justifyContent: 'space-around'}}>
                         <Left>
-                            <Text style={titleTextStyle}>{ "Catalog" }</Text>
+                            <Text style={titleTextStyle}>{ "Buy" }</Text>
                         </Left>
                         <Right>
-                            <Thumbnail style={{borderColor: config.COLOR_TEXT_DARK, borderWidth: 1}} source={require('../../../assets/images/logo.png')} />
+                            <Icon color={config.COLOR_TEXT_LIGHT} name='md-cart' />
                         </Right>
                     </View>
+
                 </Content>
             </Container>
         );

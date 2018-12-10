@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, StatusBar } from 'react-native';
-import { Container, Content, Header, Left, Right, Thumbnail, Text } from 'native-base';
+import { Container, Content, Header, Left, Right, Thumbnail, Text, View} from 'native-base';
 //LOCAL
 import config from '../../../../config';
 
@@ -15,7 +15,14 @@ export default class Orders extends React.Component {
             <Container style={{backgroundColor: config.COLOR_BACKGROUND}}>
                 <Content padder contentContainerStyle={containerStyle}>
                     <StatusBar backgroundColor={config.COLOR_BACKGROUND} barStyle='dark-content' />
-                    <Text style={titleTextStyle}>{ "Orders" }</Text>
+                    <View style={{flexDirection: 'row', flex: 1, justifyContent: 'space-around'}}>
+                        <Left>
+                            <Text style={titleTextStyle}>{ "Orders" }</Text>
+                        </Left>
+                        <Right>
+                            <Thumbnail style={{borderColor: config.COLOR_TEXT_DARK, borderWidth: 1}} source={require('../../../assets/images/logo.png')} />
+                        </Right>
+                    </View>
                 </Content>
             </Container>
         );

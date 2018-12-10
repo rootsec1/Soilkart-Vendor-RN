@@ -45,16 +45,16 @@ const bottomTabNavigator = createBottomTabNavigator(
                 if (routeName === 'Buy') iconName = 'ios-cart';
                 else if (routeName === 'Sell') iconName = 'ios-sell';
                 else iconName = 'ios-list';
-                return <Icon name={iconName} color={config.COLOR_TEXT_DARK} />;
+                return <Icon name={iconName} active={focused} color={tintColor} />;
             }
         },
         tabBarOptions: {
             showLabel: false,
-            activeTintColor: 'black',
-            inactiveTintColor: config.COLOR_TEXT_DARK,
+            activeTintColor: config.COLOR_TEXT_DARK,
+            inactiveTintColor: config.COLOR_TEXT_LIGHT,
             style: {
                 backgroundColor: 'white',
-                elevation: 8
+                elevation: 16
             }
         }
     }

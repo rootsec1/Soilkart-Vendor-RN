@@ -5,9 +5,9 @@ import firebase from 'firebase';
 //LOCAL
 import config from '../../../config';
 
-import 'core-js/es6/map'
-import 'core-js/es6/symbol'
-import 'core-js/fn/symbol/iterator'
+import 'core-js/es6/map';
+import 'core-js/es6/symbol';
+import 'core-js/fn/symbol/iterator';
 
 export default class SignIn extends React.Component {
     state = {
@@ -68,7 +68,7 @@ export default class SignIn extends React.Component {
                         />
                     </Item>
 
-                    <Button onPress={this.onSignInButtonPress.bind(this)} block style={{backgroundColor: config.COLOR_ACCENT, marginTop: 64}}>
+                    <Button onPress={this.onSignInButtonPress.bind(this)} block style={{backgroundColor: config.COLOR_ACCENT, marginTop: 64, borderRadius: 24}}>
                         {
                             this.state.progress?
                             <Spinner color='white' />:
